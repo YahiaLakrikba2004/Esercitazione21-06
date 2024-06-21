@@ -16,7 +16,7 @@ public class StationConfiguration {
 
     @Bean("Station")
     @Scope("prototype")
-    Station station(String description, StationType postType, Integer maxSeats,
+    Station stationData(String description, StationType postType, Integer maxSeats,
                     Building building) {
         return new Station();
 
