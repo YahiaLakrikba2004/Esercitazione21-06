@@ -9,7 +9,6 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @Entity
@@ -35,10 +34,8 @@ public class User {
     @Column(nullable = false)
     private String email;
 
-
     public User() {
     }
-
 
     public User(String username, String firstName, String lastName, String city, String email) {
         this.username = username;
@@ -47,9 +44,6 @@ public class User {
         this.city = city;
         this.email = email;
     }
-
-
-
 
     @Override
     public String toString() {
