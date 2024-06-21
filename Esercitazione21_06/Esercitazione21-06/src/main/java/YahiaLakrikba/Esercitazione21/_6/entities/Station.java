@@ -31,7 +31,7 @@ public class Station {
 
     @ManyToOne
     @JoinColumn(name = "buildings_id", nullable = false)
-    private Station edificio;
+    private Station building;
 
     public Station(String description, StationType stationType, StationState stationState,
                       Integer numberMaximumSeats, Station station) {
@@ -50,7 +50,7 @@ public class Station {
                 ", stationType=" + stationType +
                 ", stationState=" + stationState +
                 ", numberMaximumSeats=" + numberMaximumSeats +
-                ", edificio=" + edificio +
+                ", building=" + building +
                 '}';
     }
 }
