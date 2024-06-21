@@ -19,12 +19,14 @@ public class BuildingConfiguration {
 
     @Bean("FakeBuild")
     @Scope("prototype")
-    public Building FakeBuild() {
-        Faker faker = Faker.instance(new Locale("en-US"));
+    public Building createFakeBuilding() {
         Building building = new Building();
-        building.setNameBuilding(faker.company().name());
-        building.setAddressBuilding(faker.address().streetAddress());
-        building.setCityBuilding(faker.address().city());
+
+
+        building.setNameBuilding("Example Building");
+        building.setAddressBuilding("123 Main Street");
+        building.setCityBuilding("Cityville");
+
         return building;
     }
 }

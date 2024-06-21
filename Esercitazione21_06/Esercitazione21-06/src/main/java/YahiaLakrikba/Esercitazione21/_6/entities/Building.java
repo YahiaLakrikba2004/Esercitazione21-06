@@ -33,5 +33,4 @@ public class Building {
         this.cityBuilding = cityBuilding;
     }
 
-
 }

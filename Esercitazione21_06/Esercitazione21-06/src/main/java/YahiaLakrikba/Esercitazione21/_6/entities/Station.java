@@ -11,9 +11,7 @@ import lombok.*;
 @Table(name = "stations")
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+
 public class Station {
 
     @Id
@@ -34,13 +32,13 @@ public class Station {
     @JoinColumn(name = "building_id", nullable = false)
     private Building building;
 
-    public Station(String description, StationType stationType, StationState stationState,
-                   Integer numberMaximumSeats, Building building) {
+    public Station( String description, StationType stationType, Integer numberMaximumSeats) {
         this.description = description;
         this.stationType = stationType;
-        this.stationState = stationState;
         this.numberMaximumSeats = numberMaximumSeats;
-        this.building = building;
+    }
+
+    public Station() {
     }
 
     @Override

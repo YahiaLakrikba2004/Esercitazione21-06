@@ -26,15 +26,18 @@ public class UserConfiguration {
 
     @Bean("FakeUser")
     @Scope("prototype")
-    User fakeUser() {
-        Faker faker = Faker.instance(new Locale("en-US"));
+    public User createFakeUser() {
         User user = new User();
-        user.setUsername(user.getLastName() + "." + user.getFirstName() + "0");
-        user.setFirstName(faker.name().firstName());
-        user.setLastName(faker.name().lastName());
-        user.setCity(faker.address().cityName());
-        user.setEmail(user.getFirstName() + "." + user.getLastName() + "@domain.com");
+
+
+        user.setUsername("fake_user");
+        user.setFirstName("John");
+        user.setLastName("Doe");
+        user.setCity("New York");
+        user.setEmail("john.doe@example.com");
+
         return user;
     }
+
 
 }
